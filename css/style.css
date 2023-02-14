@@ -58,6 +58,8 @@ section {
   box-sizing: border-box;
   font-family: "Monstserrat", sans-serif;
   list-style: none;
+  scroll-behavior: smooth;
+  scroll-margin-top: 15ex;
 }
 
 main {
@@ -87,7 +89,7 @@ h6 {
 }
 
 body {
-  background-color: white;
+  background-color: #f9fbfc;
 }
 
 button {
@@ -99,107 +101,34 @@ a:hover {
 }
 
 header {
-  padding: 4rem 0;
-  background-color: white;
   height: 65px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  width: 100%;
+  padding: 3rem 0;
 }
-header a, header i {
+header a {
   color: black;
+  font-size: 18px;
 }
-header .contenedor {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  gap: "";
+header .contenedor_header {
   height: 100%;
-  padding: 0px 25px;
-}
-header .contenedor #icon_menu {
-  display: block;
-  cursor: pointer;
-  font-size: 24px;
-}
-header .contenedor .menu {
-  height: 0px;
-  position: absolute;
-  right: 10px;
-  top: 65px;
-  overflow: hidden;
-  z-index: 10;
-  box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.5);
-  border-radius: 0px 0px 5px 5px;
-  transition: all 300ms;
-  background-color: white;
-}
-header .contenedor .menu nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: "";
-  align-items: "";
-  flex-direction: column;
-  gap: 15px;
-  padding: 20px 0px;
+  align-items: center;
+  justify-content: space-between;
 }
-header .contenedor .menu nav ul li {
-  padding: 0px 40px;
+header .contenedor_header nav {
+  height: 100%;
 }
-header .contenedor .menu nav ul li a {
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-}
-header .contenedor .menu-extend {
-  height: 230px;
-}
-@media (min-width: 768px) {
-  header .contenedor #icon_menu {
-    display: none;
-  }
-  header .contenedor .menu {
-    display: block;
-    position: relative;
-    overflow: visible;
-    top: 10px;
-    right: 0;
-    height: auto;
-    background-color: transparent;
-  }
-  header .contenedor .menu nav ul {
-    flex-direction: row;
-    padding: 0;
-    gap: 20px;
-  }
-  header .contenedor .menu nav ul li {
-    padding: 0;
-  }
-}
-header .contenedor button {
-  border: 1px solid rgb(168, 168, 168);
-  padding: 0.7rem 2rem;
-  border-radius: 1.5rem;
-  background-color: transparent;
-}
-
-.item-nav-activo {
-  color: #B8FF65;
-}
-.item-nav-activo:hover {
-  color: black;
+header .contenedor_header nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo {
   color: black;
-  font-size: 28px;
-  font-weight: 400;
-  text-align: left;
-}
-
-.mayus {
-  font-weight: 400;
-  font-size: 22px;
 }
 
 .forms {
@@ -388,67 +317,39 @@ header .contenedor button {
 }
 
 footer {
-  background-color: #131231;
+  background-color: #000;
   border-radius: 40px 40px 0px 0px;
-  padding: 40px 20px 5px 20px;
+  padding: 40px 0px 0px 0px;
   border-top: 2px solid #1f1f3b;
 }
-footer .derechos {
-  color: white;
-  text-align: center;
-}
-footer .contenedor {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  align-items: flex-start;
-  justify-items: center;
-}
-footer .contenedor :first-child {
-  grid-column: 1/3;
-}
-footer .contenedor :last-child {
-  grid-column: 1/3;
-}
-footer .contenedor .seccion-footer {
-  color: white;
+footer .wrapper {
+  padding: 20px 30px 0px 30px;
   display: flex;
-  justify-content: "";
-  align-items: flex-start;
   flex-direction: column;
-  gap: 5px;
+  justify-content: space-between;
+  gap: 30px;
 }
-footer .contenedor .seccion-footer .redes {
-  padding: 5px 0px;
-  font-size: 28px;
+footer .wrapper .footer-wrapper {
   display: flex;
-  justify-content: "";
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+footer .wrapper .footer-wrapper nav div ul {
+  display: flex;
   align-items: center;
-  flex-direction: row;
-  gap: 40px;
+  gap: 25px;
+  font-size: 18px;
 }
-@media (min-width: 576px) {
-  footer .contenedor {
-    grid-template-columns: 250px repeat(2, 110px);
-    justify-content: space-evenly;
-  }
-  footer .contenedor :first-child {
-    grid-column: auto;
-  }
-  footer .contenedor :last-child {
-    grid-column: 1/4;
-  }
+footer .wrapper .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid 1px gray;
+  padding: 30px 0px 10px 0px;
 }
-@media (min-width: 768px) {
-  footer .contenedor {
-    grid-template-columns: 290px repeat(3, 110px);
-  }
-  footer .contenedor :first-child {
-    grid-column: auto;
-  }
-  footer .contenedor :last-child {
-    grid-column: auto;
-  }
+
+.icon-footer {
+  font-size: 22px;
 }
 
 .primera {
@@ -475,17 +376,81 @@ footer .contenedor .seccion-footer .redes {
   color: black;
   font-size: 1.2rem;
 }
-.primera .next-section {
+
+.next-section {
   border: 1px solid black;
   background-color: black;
   padding: 1rem 1.2rem;
   border-radius: 2rem;
 }
-.primera .next-section:hover {
+.next-section:hover {
   background-color: #B8FF65;
 }
-.primera .next-section:hover i {
+.next-section:hover i {
   color: black;
+}
+
+.radio {
+  margin: 30px 0px;
+}
+.radio .contenedorRadio {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  grid-template-areas: "texto texto transmicion transmicion" "texto texto transmicion transmicion" "texto texto reproductor reproductor";
+}
+.radio .contenedorRadio .texto {
+  grid-area: texto;
+}
+.radio .contenedorRadio .transmicion {
+  grid-area: transmicion;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.galeria {
+  margin: 30px 0px;
+}
+.galeria .contenedorGaleria {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "cover cover cover foto6" "foto4 foto5 foto3 foto2";
+  gap: 3px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.galeria .contenedorGaleria > div {
+  transition: all 200ms;
+}
+.galeria .contenedorGaleria > div:hover {
+  transform: scale(1.03);
+}
+.galeria .contenedorGaleria .estudio {
+  grid-area: cover;
+}
+.galeria .contenedorGaleria .foto2 {
+  grid-area: foto2;
+}
+.galeria .contenedorGaleria .foto2 img {
+  object-fit: cover;
+}
+.galeria .contenedorGaleria .foto3 {
+  grid-area: foto3;
+}
+.galeria .contenedorGaleria .foto4 {
+  grid-area: foto4;
+}
+.galeria .contenedorGaleria .foto5 {
+  grid-area: foto5;
+}
+.galeria .contenedorGaleria .foto6 {
+  grid-area: foto6;
 }
 
 /*# sourceMappingURL=style.css.map */
