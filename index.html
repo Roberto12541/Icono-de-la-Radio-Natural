@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abriendo App...</title>
-    
-    <meta http-equiv="refresh" content="0;url=intent://com.android.chrome/#Intent;scheme=android-app;end">
-    
+    <title>Abrir Radio</title>
     <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
+        body { font-family: sans-serif; padding: 20px; text-align: center; background: #f4f4f4; }
         .btn {
-            background-color: #007bff; /* Azul estándar */
-            color: white;
-            padding: 15px 30px;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 15px auto;
+            padding: 15px;
             text-decoration: none;
+            color: white;
             border-radius: 8px;
-            font-size: 18px;
             font-weight: bold;
-            margin-top: 20px;
-            display: inline-block;
+            font-size: 16px;
         }
+        .btn-blue { background-color: #007bff; }
+        .btn-green { background-color: #28a745; }
+        .btn-gray { background-color: #6c757d; }
+        p { color: #555; font-size: 14px; margin-bottom: 30px; }
     </style>
 </head>
 <body>
 
-    <h1>Abrir en Aplicación</h1>
-    <p>Si la aplicación no se abre automáticamente, pulsa el botón de abajo.</p>
-    
-    <a href="intent://roberto12541.github.io/Icono-de-la-Radio-Natural/#Intent;scheme=https;package=com.android.chrome;end" class="btn">
-    Abrir en Chrome
-</a>
+    <h2>📻 Selecciona una opción</h2>
+    <p>Prueba los botones en orden si el primero falla:</p>
 
+    <a href="intent://roberto12541.github.io/Icono-de-la-Radio-Natural/#Intent;scheme=https;package=com.android.chrome;end" class="btn btn-blue">
+        Opción 1: Abrir en Chrome
+    </a>
+
+    <a href="googlechrome://navigate?url=https://roberto12541.github.io/Icono-de-la-Radio-Natural/" class="btn btn-green">
+        Opción 2: Forzar App
+    </a>
+
+    <a href="https://roberto12541.github.io/Icono-de-la-Radio-Natural/" class="btn btn-gray">
+        Opción 3: Enlace Web Normal
+    </a>
 
 </body>
 </html>
