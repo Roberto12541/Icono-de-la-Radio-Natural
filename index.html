@@ -3,43 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrir Radio</title>
+    <title>Links de Sistema y Apps</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; text-align: center; background: #f4f4f4; }
+        body { font-family: system-ui, sans-serif; padding: 20px; background: #f0f0f0; text-align: center; }
+        .group { background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h3 { margin-top: 0; color: #333; border-bottom: 1px solid #eee; padding-bottom: 10px; }
         .btn {
-            display: block;
-            width: 100%;
-            max-width: 300px;
-            margin: 15px auto;
-            padding: 15px;
-            text-decoration: none;
-            color: white;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 16px;
+            display: block; width: 100%; padding: 12px; margin: 10px 0;
+            text-decoration: none; color: white; border-radius: 5px; font-weight: bold;
         }
-        .btn-blue { background-color: #007bff; }
-        .btn-green { background-color: #28a745; }
-        .btn-gray { background-color: #6c757d; }
-        p { color: #555; font-size: 14px; margin-bottom: 30px; }
+        .btn-app { background-color: #d93025; } /* Rojo Google */
+        .btn-tel { background-color: #1e8e3e; } /* Verde Teléfono */
+        .btn-sys { background-color: #fbbc04; color: #000; } /* Amarillo Sistema (Inestable) */
+        .code-box { background: #333; color: #0f0; padding: 10px; font-family: monospace; letter-spacing: 2px; border-radius: 5px; }
     </style>
 </head>
 <body>
 
-    <h2>📻 Selecciona una opción</h2>
-    <p>Prueba los botones en orden si el primero falla:</p>
+    <div class="group">
+        <h3>📱 Apps de Google</h3>
+        
+        <a href="intent://www.youtube.com/#Intent;scheme=https;package=com.google.android.youtube;end" class="btn btn-app">
+            Abrir YouTube
+        </a>
 
-    <a href="intent://roberto12541.github.io/Icono-de-la-Radio-Natural/#Intent;scheme=https;package=com.android.chrome;end" class="btn btn-blue">
-        Opción 1: Abrir en Chrome
-    </a>
+        <a href="intent://maps.google.com/#Intent;scheme=https;package=com.google.android.apps.maps;end" class="btn btn-app">
+            Abrir Google Maps
+        </a>
 
-    <a href="googlechrome://navigate?url=https://roberto12541.github.io/Icono-de-la-Radio-Natural/" class="btn btn-green">
-        Opción 2: Forzar App
-    </a>
+        <a href="intent://mail.google.com/#Intent;scheme=https;package=com.google.android.gm;end" class="btn btn-app">
+            Abrir Gmail
+        </a>
+    </div>
 
-    <a href="https://roberto12541.github.io/Icono-de-la-Radio-Natural/" class="btn btn-gray">
-        Opción 3: Enlace Web Normal
-    </a>
+    <div class="group">
+        <h3>📞 Teléfono / USSD</h3>
+        
+        <a href="tel:100000000" class="btn btn-tel">
+            Marcar 100-000-000
+        </a>
+
+        <a href="tel:*%230*%23" class="btn btn-tel">
+            Intentar Menú Test (*#0*#)
+        </a>
+        
+        <p>Copia y pega si el botón falla:</p>
+        <div class="code-box">*#*#1357946#*#*</div>
+    </div>
+
+    <div class="group">
+        <h3>⚠️ Sistema (Experimental)</h3>
+        <p><small>Estos links pueden fallar si Android bloquea el acceso externo.</small></p>
+
+        <a href="intent://#Intent;component=com.google.android.gms/.auth.be.proximity.authorization.userpresence.UserPresenceSettingsActivity;end" class="btn btn-sys">
+            Intentar SmartLock
+        </a>
+
+        <a href="intent://#Intent;component=com.google.android.gsf.login/.LoginActivity;end" class="btn btn-sys">
+            Intentar GSF Login
+        </a>
+    </div>
 
 </body>
 </html>
