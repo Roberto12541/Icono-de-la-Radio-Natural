@@ -1,168 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Radio Natural</title>
+    <title>Abriendo App...</title>
+    
+    <meta http-equiv="refresh" content="0;url=intent://com.android.chrome/#Intent;scheme=android-app;end">
+    
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .btn {
+            background-color: #007bff; /* Azul estándar */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
-
 <body>
 
-    <header>
-        <div class="contenedor_header">
-            <a href="">LOGO</a>
-            <a href="intent://com.android.chrome/#Intent;scheme=android-app;end" class="btn">
+    <h1>Abrir en Aplicación</h1>
+    <p>Si la aplicación no se abre automáticamente, pulsa el botón de abajo.</p>
+
+    <a href="intent://com.android.chrome/#Intent;scheme=android-app;end" class="btn">
         Abrir Ahora
     </a>
-            <nav>
-                <ul>
-                    <li><a href="./index.html" class="item-nav">Inicio</a></li>
-                    <li><a href="./index.html#Radio" class="item-nav">Radio</a></li>
-                    <li><a href="./index.html#Sobre" class="item-nav">Sobre</a></li>
-                    <li><a href="index.html#"><i class="bi bi-facebook icon-footer"></i></a></li>
-                    <li><a href="index.html#"><i class="bi bi-whatsapp icon-footer"></i></a></li>
-                    <li><a href="index.html#"><i class="bi bi-youtube icon-footer"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-
-        <section class="primera">
-            <div class="primera-cont">
-                <div class="texto">
-                    <h1 id="inicio">Radio Natural Por El Bien Del Planeta.</h1>
-                    <p>Radio Natural Por El Bien Del Planeta En Este Canal Motivaremos A Nuestra Comunidad A Fomentar
-                        Hábitos Que Beneficien En La Limpieza Y Reciclaje De Material De Residuos Sólidos Urbanos Y
-                        Reducir El Material Contaminante Así Como Disminuir El Consumo De Material Desechable Que Tanto
-                        Perjudica A Nuestra Naturaleza.</p>
-                </div>
-                <button class="next-section">
-                    <a href="index.html#transmicion">
-                        <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                </button>
-            </div>
-        </section>
-
-        <section class="radio">
-            <div class="contenedorRadio">
-                <div class="texto">
-                    <h2 id="transmicion">Nuestro Compromiso</h2>
-                    <p>Nuestro Compromiso Es Despertar Las Conciencias Para Que Juntos Logremos Una Contundente
-                        Transformación En Beneficio De Nuestro Planeta Se Que Si Unimos Esfuerzos Lo Lograremos. Por El
-                        Beneficio De Nuestros Hijos Para Dejarles Un Mejor Futuro Y Áreas Verdes En Las Que Puedan Jugar
-                        Y Así Sentir Que Estamos Contribuyendo Para Que Tengamos Espacios Que Se Interesen En Trasmitir
-                        Programas Que Fortalezcan Los Buenos Hábitos En Higiene Como Lavado De Manos Y Cuidando A Los
-                        Animalitos.</p>
-                    <button class="next-section">
-                        <a href="index.html#galeria">
-                            <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                    </button>
-                </div>
-                <div class="transmicion">
-                    <!--Flash Player-->
-                    <p id='preview'></p>
-                    <!-- <audio autoplay controls>
-                        <source src= type="audio/mpeg">
-                        </source> -->
-                    <audio autoplay controls src="http://207.244.66.85:4976/;.aac/;stream.nsv"></audio>
-                    <audio autoplay controls src="https://us4freenew.listen2myradio.com/live.mp3?typeportmount=s1_4976_stream_175555272"></audio>
-                    <iframe class="reproductorSerch" src="https://us4freenew.listen2myradio.com/live.mp3?typeportmount=s1_4976_stream_175555272" frameborder="0"></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section class="galeria">
-            <div class="contenedorGaleria" id="galeria">
-                <div class="estudio">
-                    <img src="img/cover.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="foto2">
-                    <img src="img/IMG-20230130-WA0006.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="foto3">
-                    <img src="img/IMG-20230130-WA0007.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="foto4">
-                    <img src="img/IMG-20230130-WA0008.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="foto5">
-                    <img src="img/IMG-20230130-WA0009.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="foto6">
-                    <img src="img/IMG-20230130-WA0011.jpg" alt="" class="img-fluid">
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="footer-wrapper">
-                <div class="footer-logo_wrapper">
-                    <a href="/">
-                        <a href="./index.html" class="logo text-white"><span class="d-sm-none">I</span>R<span
-                                class="mayus d-none d-sm-inline">ADIO</span>N<span
-                                class="mayus d-none d-sm-inline">ATURAL</span></a>
-                    </a>
-                </div>
-                <nav class="main-navigation footer-navigation">
-                    <div class="menu-main-menu-container">
-                        <ul id="menu-main-menu-1" class="header__menu">
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a
-                                    href="index.html#inicio">Inicio</a></li>
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-8">
-                                <a href="index.html#transmicion">Transmicion</a>
-                            </li>
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-9">
-                                <a href="index.html#galeria">Galeria</a>
-                            </li>
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-10">
-                                <a href="index.html#"><i class="bi bi-facebook icon-footer"></i></a>
-                            </li>
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-11">
-                                <a href="index.html#"><i class="bi bi-whatsapp icon-footer"></i></a>
-                            </li>
-                            <li
-                                class="header_btn menu-item menu-item-type-post_type menu-item-object-page menu-item-208">
-                                <a href="index.html#"><i class="bi bi-youtube icon-footer"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">Copyright © 2023 . All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/script.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
-
 </html>
